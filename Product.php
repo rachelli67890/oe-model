@@ -23,7 +23,7 @@ class Product extends Model
        $this->attributes['price'] = $value * 100;
     }
 
-    public function productInfo()
+    public function product_info()
     {
         return $this->hasMany(ProductInfo::class, 'product_id','id');
     }
