@@ -9,4 +9,9 @@ class Email extends Model
 {
     use notifiable;
     //
+
+    public function routeNotificationForMail()
+    {
+        return $this->email;
+    }
 }

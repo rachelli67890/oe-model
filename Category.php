@@ -12,5 +12,14 @@ class Category extends Model
     {
         return $this->hasMany(Product::class, 'cat_id', 'id');
     }
+
+    public function getNameAttribute($name)
+    {
+        if(session('lan') == 'EN') {
+            return $this->name_en;
+        } else {
+            return $name;
+        }
+    }
     
 }
